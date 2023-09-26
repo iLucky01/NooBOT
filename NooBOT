@@ -1,3 +1,61 @@
-color 0a
-echo TEST
-echo TEST 2
+Clear-Host
+Write-Host -ForegroundColor Red "  _   _             ____   ____ _______ "
+Write-Host -ForegroundColor Red " | \ | |           |  _ \ / __ \__   __|"
+Write-Host -ForegroundColor Red " |  \| | ___   ___ | |_) | |  | | | |   "
+Write-Host -ForegroundColor Red " | . ` |/ _ \ / _ \|  _ <| |  | | | |   "
+Write-Host -ForegroundColor Red " | |\  | (_) | (_) | |_) | |__| | | |   "
+Write-Host -ForegroundColor Red " |_| \_|\___/ \___/|____/ \____/  |_|   "
+Write-Host -ForegroundColor Red "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
+Write-Host -ForegroundColor Red " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
+Write-Host -ForegroundColor Red ""
+Write-Host -ForegroundColor Red " GEMACHT MIT LIEBE (c) NoobTube"
+                                        
+                                        
+
+
+Write-Host " "
+Write-Host " "
+Write-Host -ForegroundColor Yellow "Instagram Tools:"
+Write-Host -ForegroundColor DarkYellow "[1] Likes   [2] Follower"
+Write-Host " "
+Write-Host -ForegroundColor Yellow "Telegram Tools:"
+Write-Host -ForegroundColor DarkYellow "[ ] Likes   [ ] Dislikes   [ ] Channel-Abos"
+Write-Host " "
+Write-Host -ForegroundColor Yellow "YouTube Tools:"
+Write-Host -ForegroundColor DarkYellow "[ ] Aufrufe   [ ] Likes   [ ] Dislikes   [ ] Channel-Abos"
+#Auswahl Registrieren:
+$Auswahl = Read-Host -Prompt "Auswahl: "
+
+
+
+
+
+
+
+#Generator
+if ($Auswahl -eq '1') {
+    #Likes
+    
+    $Url = Read-Host -Prompt "URL: "
+    $menge = Read-Host -Prompt "Anzahl?"
+    $data = '{"user" : 5644008, "key" : "SPDcmJpEHhke8fSB", "method" : "add", "category" : 3, "link" : "' + $Url + '", "count" : ' + $menge + '}'
+
+} elseif ($Auswahl -eq '2') {
+    #Follower (Working):
+
+    $accountName = Read-Host -Prompt "URL: "
+    $menge = Read-Host -Prompt "Anzahl?"
+    $data = '{"user" : 5644008, "key" : "SPDcmJpEHhke8fSB", "method" : "add", "category" : 168, "link" : "' + $accountName + '", "count" : ' + $menge + '}'
+
+} else {
+    "Falsche Eingabe!"
+}
+
+$header = @{
+ "Accept"="application/json"
+ "connectapitoken"="97fe6ab5b1a640909551e36a071ce9ed"
+ "Content-Type"="application/json"
+} 
+
+Invoke-RestMethod -Uri "https://vto.pe/api" -Method 'Post' -Body $data -Headers $header | ConvertTo-JSON
+Clear-Host
