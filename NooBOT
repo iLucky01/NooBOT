@@ -40,7 +40,7 @@ if ($Auswahl -eq '1') {
     
     $Url = Read-Host -Prompt "URL: "
     $menge = Read-Host -Prompt "Anzahl?"
-    $data = '{"user" : 5644008, "key" : "' + $lizenz + '", "method" : "add", "category" : 3, "link" : "' + $Url + '", "count" : ' + $menge + '}'
+    $data = '{"user" : 5644008, "key" : "' + $lizenz + '", "method" : "add", "category" : 218, "link" : "' + $Url + '", "count" : ' + $menge + '}'
 
 } elseif ($Auswahl -eq '2') {
     #Follower (Working):
