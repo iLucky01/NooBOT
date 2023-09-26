@@ -18,20 +18,14 @@ $lizenz = Get-content .\Lizenz.txt
 Write-Host " "
 Write-Host " "
 Write-Host -ForegroundColor Yellow "Instagram Tools:"
-Write-Host -ForegroundColor DarkYellow "[1] Likes   [2] Follower"
+Write-Host -ForegroundColor DarkYellow "[1] Likes"
 Write-Host " "
-Write-Host -ForegroundColor Yellow "Telegram Tools:"
-Write-Host -ForegroundColor DarkYellow "[ ] Likes   [ ] Dislikes   [ ] Channel-Abos"
-Write-Host " "
-Write-Host -ForegroundColor Yellow "YouTube Tools:"
-Write-Host -ForegroundColor DarkYellow "[ ] Aufrufe   [ ] Likes   [ ] Dislikes   [ ] Channel-Abos"
-#Auswahl Registrieren:
-$Auswahl = Read-Host -Prompt "Auswahl: "
-
-
-
-
-
+# Write-Host -ForegroundColor Yellow "Telegram Tools:"
+# Write-Host -ForegroundColor DarkYellow "[ ] Likes   [ ] Dislikes   [ ] Channel-Abos"
+# Write-Host " "
+# Write-Host -ForegroundColor Yellow "YouTube Tools:"
+# Write-Host -ForegroundColor DarkYellow "[ ] Aufrufe   [ ] Likes   [ ] Dislikes   [ ] Channel-Abos"
+$Auswahl = Read-Host -Prompt "Auswahl"
 
 
 #Generator
@@ -42,7 +36,7 @@ if ($Auswahl -eq '1') {
     $menge = Read-Host -Prompt "Anzahl?"
     $data = '{"user" : 5644008, "key" : "' + $lizenz + '", "method" : "add", "category" : 218, "link" : "' + $Url + '", "count" : ' + $menge + '}'
 
-} elseif ($Auswahl -eq '2') {
+} elseif ($Auswahl -eq '2_REMOVE_WENN_FIXED') {
     #Follower (Working):
 
     $accountName = Read-Host -Prompt "URL: "
