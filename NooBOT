@@ -9,6 +9,8 @@ Write-Host -ForegroundColor Red "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
 Write-Host -ForegroundColor Red " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
 Write-Host -ForegroundColor Red ""
 Write-Host -ForegroundColor Red " GEMACHT MIT LIEBE (c) NoobTube"
+
+$lizenz = Get-content .\Lizenz.txt
                                         
                                         
 
@@ -38,14 +40,14 @@ if ($Auswahl -eq '1') {
     
     $Url = Read-Host -Prompt "URL: "
     $menge = Read-Host -Prompt "Anzahl?"
-    $data = '{"user" : 5644008, "key" : "SPDcmJpEHhke8fSB", "method" : "add", "category" : 3, "link" : "' + $Url + '", "count" : ' + $menge + '}'
+    $data = '{"user" : 5644008, "key" : "' + $lizenz + '", "method" : "add", "category" : 3, "link" : "' + $Url + '", "count" : ' + $menge + '}'
 
 } elseif ($Auswahl -eq '2') {
     #Follower (Working):
 
     $accountName = Read-Host -Prompt "URL: "
     $menge = Read-Host -Prompt "Anzahl?"
-    $data = '{"user" : 5644008, "key" : "SPDcmJpEHhke8fSB", "method" : "add", "category" : 168, "link" : "' + $accountName + '", "count" : ' + $menge + '}'
+    $data = '{"user" : 5644008, "key" : "' + $lizenz + '", "method" : "add", "category" : 168, "link" : "' + $accountName + '", "count" : ' + $menge + '}'
 
 } else {
     "Falsche Eingabe!"
