@@ -47,7 +47,7 @@ if ($Auswahl -eq '1') {
 
     $accountName = Read-Host -Prompt "URL: "
     $menge = Read-Host -Prompt "Anzahl?"
-    $data = '{"user" : 5644008, "key" : "' + $lizenz + '", "method" : "add", "category" : 168, "link" : "' + $accountName + '", "count" : ' + $menge + '}'
+    $data = '{"user" : 5644008, "key" : "' + $lizenz + '", "method" : "add", "category" : 218, "link" : "' + $accountName + '", "count" : ' + $menge + '}'
 
 } else {
     "Falsche Eingabe!"
