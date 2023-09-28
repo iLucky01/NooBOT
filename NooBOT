@@ -63,7 +63,7 @@ Clear-Host
 
 Write-Host -ForegroundColor Green "Auftrag erfolgreich übermittelt!"
 Write-Host -ForegroundColor White "Neuer Auftrag?
-Write-Host -ForegroundColor White "[J] Ja     [N] Nein""
+Write-Host -ForegroundColor White "[J] Ja     [N] Nein"
 $end = Read-Host -Prompt ">>>"
 
 
