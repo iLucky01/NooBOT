@@ -63,12 +63,12 @@ Clear-Host
 
 Write-Host -ForegroundColor Green "Auftrag erfolgreich übermittelt!"
 Write-Host -ForegroundColor White "Neuer Auftrag?
-Write-Host -ForegroundColor White "[J] Ja     [N] Nein"
+Write-Host -ForegroundColor White "[1] Ja     [2] Nein"
 $end = Read-Host -Prompt ">>>"
 
 
 #Ende des Programms
-if ($end -eq 'j') {
+if ($end -eq '1') {
     $NooBOT = Invoke-WebRequest https://raw.githubusercontent.com/iLucky01/NooBOT/main/NooBOT
     Invoke-Expression $($NooBOT.Content)
 } else {
