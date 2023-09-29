@@ -10,7 +10,9 @@ Write-Host -ForegroundColor Red " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
 Write-Host -ForegroundColor Red ""
 Write-Host -ForegroundColor Red " GEMACHT MIT LIEBE (c) NoobTube"
 
-$lizenz = Get-content .\Lizenz.txt
+
+#might need a fix
+$lizenz = get-Content lizenz.txt 
                                         
                                         
 
@@ -63,8 +65,8 @@ Clear-Host
 
 Write-Host -ForegroundColor Green "Auftrag erfolgreich übermittelt!"
 Write-Host -ForegroundColor White "Neuer Auftrag?
-Write-Host -ForegroundColor White "[1] Ja     [2] Nein"
-$end = Read-Host -Prompt ">>>"
+Write-Host -ForegroundColor White "[1] Ja     [2] Nein""
+$end = Read-Host -Prompt "Auswahl"
 
 
 #Ende des Programms
