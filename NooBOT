@@ -12,7 +12,7 @@ Write-Host -ForegroundColor Red " GEMACHT MIT LIEBE (c) NoobTube"
 
 
 #might need a fix
-$lizenz = get-Content lizenz.txt 
+$lizenz = Read-Host -Prompt "Lizenz"
                                         
                                         
 
